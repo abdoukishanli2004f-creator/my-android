@@ -1,9 +1,9 @@
 {
   "name": "My Android App",
   "short_name": "App",
-  "start_url": "/my-android/",
+  "start_url": "https://abdoukishanli2004f-creator.github.io/my-android/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
-  "id": "/my-android"
+  "id": "https://abdoukishanli2004f-creator.github.io/my-android/"
 }

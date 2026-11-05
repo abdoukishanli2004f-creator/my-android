@@ -1,9 +1,15 @@
 {
-  "name": "My Android App",
-  "short_name": "App",
-  "start_url": "https://abdoukishanli2004f-creator.github.io/my-android/",
+  "id": "/my-android/",
+  "name": "إنجازاتي",
+  "short_name": "إنجازاتي",
+  "description": "تطبيق لإدارة المهام اليومية وتتبع الإنجازات",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/my-android/",
+  "scope": "/my-android/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#000000",
-  "id": "https://abdoukishanli2004f-creator.github.io/my-android/"
+  "orientation": "portrait",
+  "background_color": "#f3f5f8",
+  "theme_color": "#142235",
+  "icons": []
 }

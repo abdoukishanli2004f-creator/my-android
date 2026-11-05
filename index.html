@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#142235"><title>إنجازاتي</title>
+<style>
+:root{--bg:#f3f5f8;--card:#fff;--ink:#192538;--muted:#778397;--line:#e5e9ef;--green:#287a63;--soft:#e8f3ef;--nav:#142235;--red:#b64b4b;--shadow:0 5px 18px #15263a08}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,Tahoma,Arial,sans-serif}header{background:var(--nav);color:#fff;padding:22px 16px 16px;border-radius:0 0 22px 22px}.head{display:flex;justify-content:space-between;align-items:center}.brand{font-size:23px;font-weight:850}.sub{font-size:12px;color:#bdc9d8;margin-top:4px}.tabs{display:flex;gap:7px;overflow:auto;margin-top:18px}.tab{white-space:nowrap;border:1px solid #ffffff35;color:#e7edf5;background:none;padding:9px 13px;border-radius:11px;font-weight:700}.tab.active{background:white;color:var(--nav)}main{max-width:780px;margin:auto;padding:15px 13px 40px}.page{display:none}.page.active{display:block}.card{background:var(--card);border:1px solid var(--line);border-radius:17px;padding:15px;margin-bottom:12px}.row{display:flex;align-items:center;justify-content:space-between;gap:9px}.muted{font-size:12px;color:var(--muted)}h2{font-size:17px;margin:0 0 12px}.big{font-size:30px;font-weight:850}.bar{height:8px;background:#edf0f4;border-radius:10px;overflow:hidden;margin-top:9px}.bar i{display:block;height:100%;background:var(--green);border-radius:10px}.btn{border:0;border-radius:11px;background:var(--green);color:white;padding:10px 13px;font-weight:750;font:inherit;cursor:pointer}.btn.light{background:var(--soft);color:var(--green)}.btn.gray{background:#eef1f5;color:#48566b}.btn.red{background:#fff0f0;color:var(--red)}input[type=text]{font:inherit;border:1px solid var(--line);border-radius:10px;padding:11px;width:100%;min-width:0}.add{display:flex;gap:8px}.add input{flex:1}.task{display:flex;align-items:center;gap:10px;padding:12px 1px;border-bottom:1px solid var(--line)}.task:last-child{border:0}.task input{width:21px;height:21px;accent-color:var(--green)}.task span{flex:1;font-size:14px}.task.done span{text-decoration:line-through;color:#8993a1}.tag{background:var(--soft);color:var(--green);padding:5px 9px;border-radius:20px;font-size:11px}.section{font-size:12px;color:var(--muted);font-weight:800;margin:16px 3px 8px}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.stat{background:#f7f9fb;border-radius:12px;padding:12px}.stat b{display:block;font-size:22px}.stat small{color:var(--muted)}.weekblock{margin:13px 0 18px}.weektitle{display:flex;justify-content:space-between;align-items:center;font-weight:750;font-size:14px;margin-bottom:8px}.tablewrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:13px;min-width:390px}th,td{padding:10px 8px;text-align:center;border-bottom:1px solid var(--line)}th{background:#f7f9fb;color:#5c687b;font-size:12px}td:first-child,th:first-child{text-align:right}td strong{color:var(--green)}.empty{padding:22px;text-align:center;color:var(--muted);font-size:13px}.notice{background:#fff8e9;border:1px solid #f2e2bc;border-radius:12px;padding:11px;font-size:12px;color:#795d26;line-height:1.7}.monthbar{display:flex;align-items:center;justify-content:space-between;gap:8px}.monthbar button{border:1px solid var(--line);background:#fff;border-radius:9px;padding:8px 11px}footer{text-align:center;color:#9aa3b1;font-size:11px;padding:10px}
+.card{box-shadow:var(--shadow)}.task[draggable=true]{cursor:grab}.task.dragging{opacity:.35}.task.dragover{border-top:3px solid var(--green)}
+.taskicon{font-size:21px;width:30px;text-align:center;flex:none}.taskname{flex:1;min-width:0}.task-actions{display:flex;gap:5px;align-items:center}
+.task-actions button{border:0;background:var(--soft);color:var(--green);border-radius:8px;padding:6px 8px;font:inherit;cursor:pointer}
+.cell{font-weight:800;border-radius:8px;min-width:44px}.heat-7{background:#16a34a;color:#fff}.heat-6{background:#86b85b;color:#102b17}.heat-5{background:#d7e7a4;color:#34451b}.heat-4{background:#f3e69a;color:#51420a}.heat-3{background:#f6c27a;color:#57330c}.heat-2{background:#f2a18c;color:#5a2117}.heat-1{background:#e58a91;color:#fff}.heat-0{background:#d7dce3;color:#3f4b5c}.heat-none{background:#161b22;color:#fff}
+.weekly-table td{padding:7px 5px}.weekly-table th{padding:8px 5px}
+.motivation{background:linear-gradient(135deg,#fff5d9,#fff);border:1px solid #f1d99a;border-radius:15px;padding:14px;margin:0 0 12px;color:#624b15;line-height:1.8}
+body.dark{--bg:#101722;--card:#182333;--ink:#e8eef7;--muted:#9ba9bb;--line:#2b3a4d;--green:#65c7a5;--soft:#203c38;--nav:#0b111b;--red:#f08b8b;--shadow:0 5px 18px #0003}
+body.dark .stat,body.dark th{background:#202e40}body.dark .btn.gray{background:#2b3a4d;color:#e8eef7}body.dark .monthbar button{background:#202e40;color:#e8eef7;border-color:var(--line)}
+body.dark .motivation{background:linear-gradient(135deg,#3b3420,#202b36);border-color:#776334;color:#f4dfa0}
+body.dark .heat-0{background:#364253;color:#e5eaf1}body.dark .heat-none{background:#080b10;color:#fff}
+select,input{font:inherit;border:1px solid var(--line);border-radius:10px;padding:9px;background:var(--card);color:var(--ink)}
+
+</style></head><body>
+<header><div class="head"><div><div class="brand">إنجازاتي</div><div class="sub">سجّل إنجاز اليوم، ودع التطبيق يحسب أسبوعك وشهرك</div></div><button id="themeToggle" class="tab" title="تبديل الوضع">☾</button></div><nav class="tabs"><button class="tab active" data-page="daily">اليوم</button><button class="tab" data-page="weekly">الجدول الأسبوعي</button><button class="tab" data-page="monthly">ملخص الشهر</button><button class="tab" data-page="settings">مهام الشهر</button></nav></header>
+<main>
+<section id="daily" class="page active">\n <div id="motivationBox"></div>
+ <div class="card"><div class="monthbar"><button id="prev">‹ اليوم السابق</button><div style="text-align:center"><b id="dayLabel"></b><div class="muted" id="monthLabel"></div></div><button id="next">اليوم التالي ›</button></div><div class="row" style="margin-top:15px"><div><div class="muted">إنجاز اليوم</div><div class="big" id="percent">0%</div></div><span class="tag" id="count">0 / 0</span></div><div class="bar"><i id="bar" style="width:0%"></i></div></div>
+ <div class="notice">في نهاية اليوم، ضع علامة أمام المهمة المنجزة فقط. لا تكتب ✅ أو ⛔ ولا تحسب شيئاً بنفسك؛ التطبيق يتولى الحساب الأسبوعي والشهري.</div>
+ <div id="dailyTasks"></div>
+</section>
+<section id="weekly" class="page">
+ <div class="card"><h2>جدول إنجاز كل مهمة خلال الشهر</h2><div class="muted">يُحسب تلقائياً عدد مرات إنجاز كل مهمة من أصل 7 أيام في كل أسبوع.</div><div id="weeklyTables"></div></div>
+</section>
+<section id="monthly" class="page">
+ <div class="card"><h2>حصيلة الشهر</h2><div class="muted" id="monthTitle"></div><div class="stats" style="margin-top:13px"><div class="stat"><b id="monthRate">0%</b><small>متوسط الإنجاز</small></div><div class="stat"><b id="monthDone">0</b><small>مجموع المهام المنجزة</small></div><div class="stat"><b id="activeDays">0</b><small>أيام سجلت فيها إنجازاً</small></div><div class="stat"><b id="perfectDays">0</b><small>أيام مكتملة</small></div></div><div id="monthPerTask" style="margin-top:17px"></div></div>\n <div class="card"><h2>مقارنة تطورك</h2><div id="comparison"></div></div>
+ <div class="card"><h2>الشهور السابقة</h2><div id="archiveList" class="muted">ستظهر هنا الشهور التي أغلقتها.</div></div>
+</section>
+<section id="settings" class="page">
+ <div class="card"><h2>مهام هذا الشهر</h2><div class="muted" id="planMonth"></div><div class="add" style="margin:13px 0"><input id="taskName" type="text" placeholder="اكتب مهمة جديدة"><button class="btn" id="add">إضافة</button></div><div class="muted">اسحب المهمة لتغيير ترتيبها، ويمكنك تعديل اسمها ورمزها دون حذف سجلها السابق.</div><div id="planTasks"></div></div>
+ <div class="card"><h2>إغلاق الشهر وبدء شهر جديد</h2><p class="muted">عند الإغلاق، تُحفظ مهام الشهر وسجلاته في الأرشيف. ثم تنشئ قائمة جديدة للشهر التالي، ويمكنك اختيار مهام مختلفة تماماً.</p><button class="btn" id="newMonth">إغلاق هذا الشهر وبدء شهر جديد</button></div>
+ <div class="card"><h2>تذكير المساء</h2><p class="muted">ينبهك التطبيق مساءً لتسجيل مهام اليوم، حتى لا تنسى وضع العلامات.</p><div class="row" style="margin:12px 0"><label for="reminderTime" style="font-size:14px">وقت التذكير</label><input id="reminderTime" type="time" value="21:00" style="max-width:135px"></div><label class="task"><input type="checkbox" id="reminderOn" checked><span>تفعيل تذكير المساء</span></label><button class="btn light" id="saveReminder" style="margin-top:10px">حفظ إعدادات التذكير</button><p class="muted" id="reminderStatus" style="margin-top:9px">التذكير يعمل عندما يكون التطبيق مفتوحاً أو نشطاً. للسماح بالإشعارات، وافق على طلب المتصفح.</p></div>
+<div class="card"><h2>نسخة احتياطية</h2><p class="muted">بياناتك محفوظة على هذا الجهاز فقط. صدّر نسخة احتياطية دورياً حتى لا تفقد سجلاتك إذا حذفت بيانات المتصفح.</p><div class="row"><button class="btn light" id="export">تصدير البيانات</button><label class="btn gray" for="import">استيراد نسخة</label><input id="import" type="file" accept="application/json" hidden></div></div>
+</section><footer>إنجازاتي · يعمل محلياً على جهازك</footer></main>
+<script>
+const STORE='munjazati_monthly_v2';
+const initial=["الفجر","الظهر","العصر","المغرب","العشاء","الشفع","الوتر","الاستغفار","أذكار الصباح","أذكار المساء","20 دقيقة فرنسية","15 دقيقة إنجليزية","حفظ صفحة من سورة مريم","مراجعة صفحتين من التوبة أو الكهف"];
+function iconFor(name){let s=name.toLowerCase();if(s.includes('فجر'))return '🌅';if(s.includes('ظهر'))return '☀️';if(s.includes('عصر'))return '🌤️';if(s.includes('مغرب'))return '🌇';if(s.includes('عشاء'))return '🌙';if(s.includes('وتر')||s.includes('شفع'))return '🤲';if(s.includes('استغفار'))return '📿';if(s.includes('أذكار'))return '🤲';if(s.includes('مريم')||s.includes('قرآن')||s.includes('التوبة')||s.includes('الكهف'))return '📖';if(s.includes('فرنسية'))return '🇫🇷';if(s.includes('إنجليزية')||s.includes('انجليزية'))return '🇬🇧';if(s.includes('رياضة')||s.includes('جم'))return '🏋️';if(s.includes('ركض')||s.includes('جري'))return '👟';if(s.includes('طب'))return '🩺';if(s.includes('دراسة'))return '📚';return '⭐'}
+const monthKey=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0');
+const dateKey=d=>monthKey(d)+'-'+String(d.getDate()).padStart(2,'0');
+const parseMonth=k=>{let [y,m]=k.split('-').map(Number);return new Date(y,m-1,1,12)};
+let data=load(), selected=new Date();selected.setHours(12,0,0,0);
+function load(){try{let x=JSON.parse(localStorage.getItem(STORE));if(x&&x.plans&&x.records)return x}catch(e){}let k=monthKey(new Date());return {plans:{[k]:initial.map((name,i)=>({id:i+1,name,icon:iconFor(name)}))},records:{},archives:[],nextId:initial.length+1}}
+function save(){localStorage.setItem(STORE,JSON.stringify(data))}
+function plan(k){let p=data.plans[k]||[];p.forEach(t=>{if(!t.icon)t.icon=iconFor(t.name)});return p}
+function rec(d){return data.records[dateKey(d)]||{}}
+function safe(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function fmt(d,o={weekday:'long',day:'numeric',month:'long',year:'numeric'}){return new Intl.DateTimeFormat('ar-DZ',o).format(d)}
+function pct(d){let ts=plan(monthKey(d)),r=rec(d);return ts.length?Math.round(ts.filter(t=>r[t.id]).length/ts.length*100):0}
+function renderDaily(){let k=monthKey(selected),ts=plan(k),r=rec(selected),done=ts.filter(t=>r[t.id]).length,p=ts.length?Math.round(done/ts.length*100):0;document.getElementById('dayLabel').textContent=fmt(selected);document.getElementById('monthLabel').textContent=fmt(selected,{month:'long',year:'numeric'});document.getElementById('percent').textContent=p+'%';document.getElementById('count').textContent=done+' / '+ts.length+' مهمة';document.getElementById('bar').style.width=p+'%';
+ document.getElementById('dailyTasks').innerHTML=ts.length?'<div class="section">مهام اليوم</div><div class="card">'+ts.map(t=>`<label class="task ${r[t.id]?'done':''}"><input type="checkbox" data-task="${t.id}" ${r[t.id]?'checked':''}><span class="taskicon">${safe(t.icon||iconFor(t.name))}</span><span>${safe(t.name)}</span></label>`).join('')+'</div>':'<div class="card empty">لا توجد مهام لهذا الشهر. أضف مهامك من تبويب «مهام الشهر».</div>';
+ document.querySelectorAll('[data-task]').forEach(c=>c.onchange=()=>{let dk=dateKey(selected);data.records[dk]??={};if(c.checked)data.records[dk][c.dataset.task]=true;else delete data.records[dk][c.dataset.task];save();render()});
+}
+function renderWeekly(){
+ let k=monthKey(selected),d=parseMonth(k),days=new Date(d.getFullYear(),d.getMonth()+1,0).getDate(),ts=plan(k),weeks=[];
+ for(let start=1;start<=days;start+=7){let end=Math.min(start+6,days);weeks.push({start,end})}
+ if(!ts.length){document.getElementById('weeklyTables').innerHTML='<div class="empty">لا توجد مهام مسجلة لهذا الشهر.</div>';return}
+ let head='<tr><th>المهمة</th>'+weeks.map((w,i)=>`<th>الأسبوع ${i+1}<br><small>${w.start}–${w.end}</small></th>`).join('')+'<th>المجموع</th></tr>';
+ let rows=ts.map(t=>{
+   let counts=weeks.map(w=>{let n=0;for(let day=w.start;day<=w.end;day++){let dt=new Date(d.getFullYear(),d.getMonth(),day,12);if(rec(dt)[t.id])n++}return n});
+   let total=counts.reduce((x,y)=>x+y,0);
+   return `<tr><td style="text-align:right;font-weight:700;white-space:nowrap">${safe(t.icon||iconFor(t.name))} ${safe(t.name)}</td>`+counts.map((n,i)=>{let denom=weeks[i].end-weeks[i].start+1;let cls=n===0?'heat-0':n===denom?'heat-7':`heat-${Math.min(6,Math.max(1,Math.round(n/denom*7)))}`;return `<td><div class="cell ${cls}">${n}/${denom}</div></td>`}).join('')+`<td><strong>${total}</strong></td></tr>`;
+ }).join('');
+ document.getElementById('weeklyTables').innerHTML=`<div class="weektitle" style="margin:14px 0"><span>${fmt(d,{month:'long',year:'numeric'})}</span><span class="tag">عدد مرات الإنجاز</span></div><div class="tablewrap"><table><thead>${head}</thead><tbody>${rows}</tbody></table></div><p class="muted" style="margin-top:10px">كل رقم يوضح عدد الأيام التي أنجزت فيها المهمة خلال ذلك الأسبوع. الأسابيع مقسمة إلى 1–7، 8–14، 15–21، 22–28، ثم الأيام المتبقية إن وجدت.</p>`;
+}
+function renderMonthly(){let k=monthKey(selected),d=parseMonth(k),days=new Date(d.getFullYear(),d.getMonth()+1,0).getDate(),ts=plan(k),rates=Array.from({length:days},(_,i)=>pct(new Date(d.getFullYear(),d.getMonth(),i+1,12))),total=0,active=rates.filter(x=>x>0).length,perfect=rates.filter(x=>x===100).length;for(let i=1;i<=days;i++){let dt=new Date(d.getFullYear(),d.getMonth(),i,12);total+=ts.filter(t=>rec(dt)[t.id]).length}
+ let possible=ts.length*days;document.getElementById('monthTitle').textContent=fmt(d,{month:'long',year:'numeric'});document.getElementById('monthRate').textContent=(possible?Math.round(total/possible*100):0)+'%';document.getElementById('monthDone').textContent=total;document.getElementById('activeDays').textContent=active;document.getElementById('perfectDays').textContent=perfect;
+ document.getElementById('monthPerTask').innerHTML=ts.map(t=>{let n=0;for(let i=1;i<=days;i++)if(rec(new Date(d.getFullYear(),d.getMonth(),i,12))[t.id])n++;return `<div class="row" style="padding:9px 0;border-bottom:1px solid var(--line)"><span style="font-size:13px">${safe(t.icon||iconFor(t.name))} ${safe(t.name)}</span><b style="color:var(--green)">${n} مرة</b></div>`}).join('');
+ let prev=data.archives.filter(a=>a.key<k).sort((a,b)=>b.key.localeCompare(a.key))[0];let currentRate=possible?Math.round(total/possible*100):0;let cmp=document.getElementById('comparison');if(!prev){cmp.innerHTML='<div class="empty">ستظهر المقارنة بعد إغلاق شهر واحد على الأقل وحفظه في الأرشيف.</div>'}else{let diff=currentRate-(prev.rate||0);let prior=prev.taskStats||{};let lines=ts.map(t=>{let now=0;for(let i=1;i<=days;i++)if(rec(new Date(d.getFullYear(),d.getMonth(),i,12))[t.id])now++;let oldStat=prior[t.name];if(!oldStat)return '';let delta=now-oldStat.count;return `<div class="row" style="padding:7px 0;border-bottom:1px solid var(--line)"><span>${safe(t.icon||iconFor(t.name))} ${safe(t.name)}</span><b>${oldStat.count} ← ${now} <small class="muted">(${delta>0?'+':''}${delta})</small></b></div>`}).join('');cmp.innerHTML=`<div class="stats"><div class="stat"><small>الشهر السابق · ${safe(prev.label)}</small><b>${prev.rate}%</b></div><div class="stat"><small>الشهر الحالي</small><b>${currentRate}%</b></div></div><p style="font-weight:800;color:${diff>=0?'var(--green)':'var(--red)'}">${diff>0?'تحسن بـ '+diff+' نقطة مئوية':diff<0?'تراجع بـ '+Math.abs(diff)+' نقطة مئوية':'لم تتغير النسبة'} مقارنة بالشهر السابق.</p>${lines||'<p class="muted">لا توجد مهام مشتركة للمقارنة التفصيلية.</p>'}<p class="muted">تُقارن المهام المتشابهة بالاسم. إذا غيّرت اسم مهمة، قد لا تظهر ضمن المقارنة التفصيلية.</p>`}
+ document.getElementById('archiveList').innerHTML=data.archives.length?data.archives.slice().reverse().map(a=>`<div class="row" style="padding:8px 0;border-bottom:1px solid var(--line)"><span>${safe(a.label)}</span><b>${a.rate}% · ${a.done} إنجاز</b></div>`).join(''):'لا توجد شهور مغلقة بعد.';
+}
+function renderPlan(){let k=monthKey(selected);document.getElementById('planMonth').textContent='الشهر المحدد: '+fmt(parseMonth(k),{month:'long',year:'numeric'});document.getElementById('planTasks').innerHTML=plan(k).map(t=>`<div class="task" draggable="true" data-drag="${t.id}"><span class="taskicon">${safe(t.icon||iconFor(t.name))}</span><span class="taskname">${safe(t.name)}</span><div class="task-actions"><button data-edit="${t.id}">✏️</button><button data-remove="${t.id}">حذف</button></div></div>`).join('')||'<div class="empty">أضف أول مهمة لهذا الشهر.</div>';
+ let dragId=null;document.querySelectorAll('[data-drag]').forEach(el=>{el.ondragstart=()=>{dragId=el.dataset.drag;el.classList.add('dragging')};el.ondragend=()=>{el.classList.remove('dragging');document.querySelectorAll('.dragover').forEach(x=>x.classList.remove('dragover'))};el.ondragover=e=>{e.preventDefault();el.classList.add('dragover')};el.ondragleave=()=>el.classList.remove('dragover');el.ondrop=e=>{e.preventDefault();el.classList.remove('dragover');let arr=plan(k),from=arr.findIndex(x=>String(x.id)===String(dragId)),to=arr.findIndex(x=>String(x.id)===el.dataset.drag);if(from<0||to<0||from===to)return;let [m]=arr.splice(from,1);arr.splice(to,0,m);save();renderPlan()}});
+ document.querySelectorAll('[data-remove]').forEach(b=>b.onclick=()=>{if(confirm('إيقاف هذه المهمة من الخطة؟ سيبقى سجل إنجازاتها محفوظاً ولن تُحذف بياناتها السابقة.')){data.plans[k]=plan(k).filter(t=>t.id!=b.dataset.remove);save();render()}});
+ document.querySelectorAll('[data-edit]').forEach(b=>b.onclick=()=>{let t=plan(k).find(x=>String(x.id)===b.dataset.edit);if(!t)return;let n=prompt('عدّل اسم المهمة:',t.name);if(n===null||!n.trim())return;let ic=prompt('اختر رمزاً تعبيرياً (اتركه كما هو إذا أردت):',t.icon||iconFor(t.name));t.name=n.trim();if(ic&&ic.trim())t.icon=ic.trim();save();render()})}
+function renderMotivation(){let el=document.getElementById('motivationBox');let day=selected.getDay();if(day!==1){el.innerHTML='';return}let msgs=['أسبوع جديد، صفحة جديدة. لا تحمل تقصير الأمس إلى اليوم؛ ابدأ بخطوة صغيرة الآن. 🌱','لا تنتظر الحماس كي تبدأ؛ ابدأ، وسيأتي الحماس في الطريق. 🔥','هدف هذا الأسبوع ليس الكمال، بل أن تتقدم ولو قليلاً على الأسبوع الماضي. 💪','كل علامة تضعها اليوم هي وعد صغير تفي به لنفسك. واصل! ⭐'];let idx=Math.floor((selected.getDate()-1)/7)%msgs.length;el.innerHTML=`<div class="motivation"><b>🌟 بداية أسبوع جديد</b><div>${msgs[idx]}</div><small>اختر مهمة واحدة وابدأ بها الآن.</small></div>`}
+function render(){renderDaily();renderWeekly();renderMonthly();renderPlan();renderMotivation()}
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab,.page').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.page).classList.add('active')});
+document.getElementById('prev').onclick=()=>{selected.setDate(selected.getDate()-1);render()};document.getElementById('next').onclick=()=>{selected.setDate(selected.getDate()+1);render()};
+document.getElementById('add').onclick=()=>{let el=document.getElementById('taskName'),name=el.value.trim();if(!name)return;let k=monthKey(selected);data.plans[k]??=[];let ic=prompt('اختر رمزاً تعبيرياً للمهمة (مثلاً 📖 أو 🏋️):',iconFor(name))||iconFor(name);data.plans[k].push({id:data.nextId++,name,icon:ic});el.value='';save();render()};
+document.getElementById('taskName').onkeydown=e=>{if(e.key==='Enter')document.getElementById('add').click()};
+document.getElementById('newMonth').onclick=()=>{let old=monthKey(selected),d=parseMonth(old),next=new Date(d.getFullYear(),d.getMonth()+1,1,12),nk=monthKey(next);if(data.plans[nk]){alert('خطة الشهر التالي موجودة بالفعل. انتقل إلى أحد أيامه لتعديل مهامه.');return}if(!confirm('سيُحفظ ملخص '+fmt(d,{month:'long',year:'numeric'})+' في الأرشيف، ثم ستبدأ خطة جديدة. هل تريد المتابعة؟'))return;let days=new Date(d.getFullYear(),d.getMonth()+1,0).getDate(),ts=plan(old),done=0;for(let i=1;i<=days;i++){let dt=new Date(d.getFullYear(),d.getMonth(),i,12);done+=ts.filter(t=>rec(dt)[t.id]).length}let possible=ts.length*days;let taskStats={};ts.forEach(t=>{let n=0;for(let i=1;i<=days;i++)if(rec(new Date(d.getFullYear(),d.getMonth(),i,12))[t.id])n++;taskStats[t.name]={count:n,icon:t.icon||iconFor(t.name)}});data.archives.push({key:old,label:fmt(d,{month:'long',year:'numeric'}),done,rate:possible?Math.round(done/possible*100):0,tasks:ts,taskStats});data.plans[nk]=[];selected=next;save();render();alert('تم حفظ الشهر السابق وفتح خطة جديدة فارغة. أضف مهام الشهر الجديد.')};
+document.getElementById('export').onclick=()=>{let a=document.createElement('a'),u=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));a.href=u;a.download='إنجازاتي-نسخة-احتياطية.json';a.click();URL.revokeObjectURL(u)};
+document.getElementById('import').onchange=async e=>{try{let x=JSON.parse(await e.target.files[0].text());if(!x.plans||!x.records)throw 0;data=x;save();render();alert('تم استيراد البيانات بنجاح')}catch(_){alert('ملف النسخة الاحتياطية غير صالح')}};
+const REMKEY='munjazati_evening_reminder';
+function reminderSettings(){try{return JSON.parse(localStorage.getItem(REMKEY))||{on:true,time:'21:00'}}catch(e){return {on:true,time:'21:00'}}}
+function initReminder(){
+ let cfg=reminderSettings(),time=document.getElementById('reminderTime'),on=document.getElementById('reminderOn'),status=document.getElementById('reminderStatus');
+ time.value=cfg.time||'21:00';on.checked=cfg.on!==false;
+ document.getElementById('saveReminder').onclick=async()=>{
+   cfg={on:on.checked,time:time.value||'21:00'};
+   if(cfg.on && 'Notification' in window && Notification.permission==='default'){
+     try{await Notification.requestPermission()}catch(e){}
+   }
+   localStorage.setItem(REMKEY,JSON.stringify(cfg));
+   status.textContent=cfg.on?'تم حفظ الإعداد. سيذكّرك التطبيق في الوقت المحدد ما دام مفتوحاً، مع السماح بالإشعارات.':'تم إيقاف تذكير المساء.';
+   checkReminder();
+ };
+ function checkReminder(){
+   cfg=reminderSettings();if(!cfg.on)return;
+   let now=new Date(),hh=String(now.getHours()).padStart(2,'0'),mm=String(now.getMinutes()).padStart(2,'0');
+   if(hh+':'+mm!==cfg.time)return;
+   let stamp=now.getFullYear()+'-'+(now.getMonth()+1)+'-'+now.getDate();
+   if(localStorage.getItem('munjazati_reminded')===stamp)return;
+   localStorage.setItem('munjazati_reminded',stamp);
+   if('Notification' in window && Notification.permission==='granted'){
+     let n=new Notification('إنجازاتي – حان وقت التسجيل',{body:'افتح التطبيق وسجّل المهام التي أنجزتها اليوم.',tag:'munjazati-evening'});
+     n.onclick=()=>{window.focus();document.querySelector('[data-page="daily"]').click();n.close()};
+   }else{
+     status.textContent='حان وقت تسجيل مهام اليوم. افتح تبويب «اليوم» وضع علامات الإنجاز.';
+     alert('حان وقت تسجيل مهام اليوم في تطبيق إنجازاتي.');
+   }
+ }
+ setInterval(checkReminder,20000);
+ document.addEventListener('visibilitychange',()=>{if(!document.hidden)checkReminder()});
+}
+initReminder();
+render();
+</script></body></html>
